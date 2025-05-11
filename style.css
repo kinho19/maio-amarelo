@@ -1,0 +1,630 @@
+
+
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #fffbea, #fdf3b5);
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+        /* === TOPO === */
+header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #333;
+}
+
+section {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex: 2;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+a {
+  color: orange;
+  text-decoration: line;
+  font-weight: bold;
+}
+
+a:hover {
+  color:#ffca28;
+  text-decoration: none;
+}
+
+.banner-asfalto {
+  background-image: url('./imagens/gustavo-zambelli-MIC75hn_CMI-unsplash.jpg'); 
+  background-size: cover; /* A imagem vai cobrir toda a largura do banner */
+  background-position: center center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7; /* Deixando a imagem mais suave */
+}
+
+.banner-asfalto:after {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  content: "";
+  backdrop-filter: blur(1.5px); /*para desfocar a imagem*/
+  z-index: 0;
+}
+
+#titulo h1 {
+  margin-top: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.yellow {
+  color: yellow;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.texto-cabecalho {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /*espaço entre titulo e o botão*/
+}
+
+/*Melhorando a visibilidade do título com a imagem de fundo*/
+.texto-cabecalho h1 {
+  font-size: 42px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.texto-cabecalho p {
+  font-size: 23px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.botao-acao { 
+  box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-acao:hover {
+  background-color: black;
+  transform: scale(1.05);
+}
+
+.creditos-img {
+  position: absolute;
+  right: 12px;
+  font-size: smaller; /*diminui o tamanho do texto*/
+  color: #f1f1f1; 
+  z-index: 2; /*garante que o texto fique acima da imagem*/ 
+  opacity: 0.7; /*para deixar um pouco discreto*/
+  font-style: italic;
+}
+
+        /* == "Imagem fixa laço Maio Amarelo" == */
+.laco-fixo {
+  position: fixed;
+  right: 10px;
+  height: 60px;
+  top: 10px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.laco-fixo:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+/* === "O que é o Maio Amarelo" === */
+.introducao-maio-amarelo {
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  border-left: 5px solid #ffcc00;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+.titulos {
+  Font-size: 24px;
+}
+
+
+        /* ==== estatísticas + calendário === */
+.conteudo-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  gap: 40px;
+}
+
+
+
+
+        /* === gráficos circulares === */
+ .graficos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.grafico {
+  height: 140px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+  background: conic-gradient(#ffca28 var(--percent), #ddd 0%);
+  border-radius: 50%;
+  position: relative;
+}
+
+.grafico::after {
+  width: 100px;
+  height: 100px;
+  background: white;
+  content:'';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.grafico span {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.bloco-grafico {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.legenda-grafico {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #222;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+/* === CALENDÁRIO === */
+.area-calendario {
+  flex: 1; /* 1 parte do espaço */
+  max-width: 350px;
+  background: transparent;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  text-align: center;
+  
+}
+
+ .imagem-calendario {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+ }
+
+ .texto-calendario {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+ }
+
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .conteudo-principal {
+    flex-direction: column; /* Empilha */
+    align-items: center;
+  }
+
+  .graficos {
+    justify-content: center;
+  }
+
+  .area-calendario {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+
+
+
+ /* === DICAS DE SEGURANÇA - CARROSSEL 3D === */
+
+ 
+ .dicas-section {
+  padding: 60px 20px;
+  background-color: #0c0c0c;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.titulo-dicas {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.carrossel-dicas {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrossel-dicas-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.carrossel-dica {
+  min-width: 100%;
+  padding: 0 10px;
+ 
+  text-align: center;
+  
+}
+
+.carrossel-dica img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrossel-dica h3 {
+  margin-top: 15px;
+  font-size: 24px;
+  color: #ffd700;
+}
+
+.carrossel-dica p {
+  font-size: 16px;
+  color: #fff;
+  margin: 10px;
+}
+
+.btn-anterior,
+.btn-proximo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-anterior { left: 10px; }
+.btn-proximo { right: 10px; }
+
+@media (max-width: 768px) {
+  .carrossel-dica {
+    padding: 10px;
+  }
+
+  .carrossel-dica img {
+    max-height: 300px;
+  }
+}
+
+        /* === POR QUE MAIO AMARELO === */
+.porque-maio {
+  background-color: transparent;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: center;
+  border-left: 5px  solid #ffcc00;
+  border-radius: 8px;
+  box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.porque-maio .fonte {
+  color: #747272;
+  font-size: 15px;
+  font-style: italic;
+}
+
+
+
+        /* === VOCÊ SABIA === */
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.placa-destino {
+  display: flex;
+  justify-content: center;
+  margin: 40px 20px;
+  background-color: transparent;
+}
+
+.estrutura-placa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 550px; 
+  position: relative; 
+  
+}
+
+.placa {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  color: #fff;
+  font-family: 'Arial Black', sans-serif;
+  border: 5px solid #1e563e;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 3px white inset;
+  background-color: rgb(1, 68, 33);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2; /*placa acima das barras */
+}
+
+.icone-placa {
+  font-size: x-large;
+}
+
+.suporte {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 25px;
+  margin-top: -20px; /*cola mais na placa */
+  z-index: 1; /*barras atrás*/
+}
+
+.barra {
+  width: 12px;
+  height: 120px;
+  background: linear-gradient(to bottom, #999, #ccc, #999);
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4)
+}
+
+.setas {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.seta-btn {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1px 10px;
+  background-color: #1e563e;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border: 3px solid;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.seta-btn:hover {
+  background-color: rgb(0, 81, 255);
+  transform: scale(1.1);
+}
+
+
+
+       /* === LINHA DO TEMPO === */
+
+.linha-do-tempo {
+  background: transparent;
+  padding: 32px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.container-semaforo {
+  background-color: #333;
+  position: relative;
+  width: 70px;
+  margin: 32px auto;
+  border-radius: 10px;
+  padding: 10px 0; 
+}
+
+.linha {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px; /*altera tamanho do corpo*/
+  gap: 10px;
+  z-index: 1;
+}
+
+.luz {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: blink 3s infinite;
+  z-index: 2;
+}
+
+.vermelha {
+  background-color: red;
+  animation-delay: 0s;
+}
+
+.amarela {
+  background-color: yellow;
+  animation-delay: 1s;
+}
+
+.verde {
+  background-color: limegreen;
+  animation-delay: 2s;
+}
+
+.texto {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: #fff8;
+  max-width: 300px;
+  position: absolute;
+  white-space: nowrap; /*impede que o texto quebre para a linha de baixo*/
+  overflow: hidden; /*corta o texto se caso não couber na tela inteira*/
+  text-overflow: ellipsis; /*quando texto for grande, essa propriedade coloca "..." no final para sinalizar que o texto está incompleto*/
+}
+
+@media (max-width: 540px) {
+  .texto {
+    max-width: 250px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible;
+    text-overflow: unset;
+}
+}
+
+.texto.direita {
+  left: 80px;
+  text-align: left;
+}
+
+.texto.esquerda {
+  right: 80px;
+  text-align: right;
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+        /*Avaliação teste*/
+.referencias {
+  background-color: #fffef0;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-left: 5px solid #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+        
+.referencias h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+        
+.referencias ul {
+  list-style: none;
+  padding-left: 0;
+}
+        
+.referencias li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #444;
+}
+        
+.referencias a {
+  color: #cc8800;
+  font-weight: bold;
+  text-decoration: none;
+}
+        
+.referencias a:hover {
+  text-decoration: underline;
+}
+
+
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 40px;
+}
+
+
+ @media (max-width: 768px) {
+  .graficos {
+    justify-content: center;
+  }
+ }

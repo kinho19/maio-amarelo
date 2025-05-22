@@ -1,4 +1,12 @@
 
+//transição fluida pop up
+window.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("popupInfo");
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 8000); // fecha após 8 segundos
+});
+
 //Gráficos
 window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.grafico').forEach(el => {

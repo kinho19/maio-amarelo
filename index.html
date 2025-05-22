@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maio Amarelo - Tecnologia pela Vida</title>
+
+    <!-- FONTES GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!-- AOS - animações de scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 
 
 <body>    
 
-
+<div class="popup-info" id="popupInfo">
+  <div class="popup-conteudo">
+    <p><strong>Você sabia?</strong><br>Mais de 50% dos acidentados em 2024 no trânsito eram motociclistas. ⚠️</p>
+    <button onclick="document.getElementById('popupInfo').style.display='none'">Fechar</button>
+  </div>
+</div>
 
 
 
@@ -18,10 +30,10 @@
     <div class="banner-asfalto"></div>
     <div class="texto-cabecalho"> 
         <div id= "titulo">
-            <h1>Maio <span class="yellow">Amarelo</span></h1> 
+            <h1 data-aos="fade-down" data-aos-once="true">Maio <span class="yellow">Amarelo</span></h1> 
         </div>
 
-        <p style=" color: yellow; font-style: italic;  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.4); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <p style=" color: yellow; font-style: italic;  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.4); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" data-aos="fade-up">
           "Desacelere, seu bem maior é a vida" <!--portal de trânsito-->
         </p>
         <a href="#dicas" class="botao-acao">Saiba como se proteger</a> 
@@ -29,7 +41,7 @@
     <p class="creditos-img">Foto de Gustavo Zambelli na Unsplash</p>
 </header>
 
-<div class="introducao-maio-amarelo">
+<div class="introducao-maio-amarelo" data-aos="fade-up" data-aos-once="true">
   <p>
     🚦 <strong class="titulos"> O que é o Maio Amarelo? 🚦</strong><br>
     O Maio Amarelo é um movimento internacional de conscientização para a redução dos acidentes de trânsito. Criado em 2014 pelo Observatório Nacional de Segurança Viária (ONSV), a iniciativa foi inspirada na “Década de Ação pela Segurança no Trânsito” proposta pela Organização das Nações Unidas (ONU). O objetivo é chamar a atenção da sociedade para o alto índice de mortes e feridos no trânsito por meio de ações coordenadas entre o poder público, empresas e cidadãos. <br> Fonte:  
@@ -38,14 +50,14 @@
 </div>
 
 <!--Simbolo Maio Amarelo na lateral-->
-<img src="./imagens/designlacomaioamarelo-removebg-preview.png" alt="laço Maio Amarelo" class="laco-fixo">
+<img src="./imagens/designlacomaioamarelo-removebg-preview.png" alt="laço Maio Amarelo" class="laco-fixo" data-aos="fade-down">
 
 
 <!--Conteúdo principal-->
 <div class="conteudo-principal"> 
     <section> 
         <h2>Estatísticas Visuais</h2>
-        <div class="graficos">
+        <div class="graficos" data-aos="zoom-in">
           <div class="bloco-grafico">
             <div class="grafico" data-percent="90">
               <span class="valor">3 milhões</span>
@@ -76,7 +88,7 @@
     </section>
 
     <!-- Calendário DENTRO do mesmo container -->
-    <aside class="area-calendario" id="area-calendario">
+    <aside class="area-calendario" id="area-calendario" data-aos="fade-right">
         <img src="./imagens/calendário400px.jpg" alt="Calendário Maio Amarelo" class="imagem-calendario">
         <p class="texto-calendario">Maio Amarelo: Mês de Conscientização no Trânsito</p>
     </aside>
@@ -123,7 +135,7 @@
 
 
   <!--SEÇÃO POR QUE MAIO?-->
-<section class="porque-maio">
+<section class="porque-maio" data-aos="fade-up">
   <strong class="titulos"> Por que Maio? </strong>
   <p>
     O mês de maio foi escolhido como referência para o movimento Maio Amarelo porque, em 11 de maio de 2011, a Organização das Nações Unidas (ONU) decretou a "Década de Ação para a Segurança no Trânsito". Desde então, maio tornou-se o período simbólico para ações voltadas à segurança viária em todo o mundo. <br> Fonte: 
@@ -136,7 +148,7 @@
 
 
   <!--SEÇÃO VOCÊ SABIA-->
-  <section class="placa-destino no-shadow" id="placaDicas">
+  <section class="placa-destino no-shadow" id="placaDicas" data-aos="flip-left" data-aos-once="true">
     <div class="estrutura-placa">
       <div class="placa">
         <div class="cabecalho-placa">
@@ -163,7 +175,7 @@
 
 
 <!-- Linha do tempo com semáforo interativo -->
-<section class="linha-do-tempo">
+<section class="linha-do-tempo" data-aos="slide-up">
   <h2>Linha do Tempo - Maio Amarelo</h2>
   <div class="container-semaforo">
     <div class="linha">
@@ -183,7 +195,7 @@
 
 
 <!--Avaliação-->
-<section class="avaliacao">
+<section class="avaliacao" data-aos="zoom-in">
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmPQ8NOUfA52v8iknIZ_F5ytRpvu5d8Q0rkgtzXVd4ogR3aA/viewform?usp=dialog"
           width="100%"
           height="400"
@@ -194,7 +206,7 @@
 
 
 <!--Formulário de Rodapé do site-->
-<section class="referencias">
+<section class="referencias" data-aos="fade-up" data-aos-once="true">
   <h2>Referências Bibliográficas</h2>
   <ul>
     <li>Observatório Nacional de Segurança Viária (ONSV). Disponível em: <a href="https://www.onsv.org.br/o-movimento" target="_blank">onsv.org.br</a></li>
@@ -213,6 +225,12 @@
     <p>Imagem por Gustavo Zambelli / <a href="https://www.Unsplash.com" target="_blank">Unsplash</a></p>
     <p>Imagens da seção de dicas retiradas no <a href="https://www.freepik.com" target="_blank">Freepik</a></p>      
 </footer>
+
+<!-- AOS - animações de entrada -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+</script>
 
 <script src="script.js"></script>
       

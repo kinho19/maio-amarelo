@@ -8,10 +8,14 @@
 }
 
 body {
-  font-family: arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #333;
   background: linear-gradient(to bottom, #fffbea, #fdf3b5);
   }
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
@@ -611,6 +615,50 @@ a:hover {
         
 .referencias a:hover {
   text-decoration: underline;
+}
+
+
+/* POPUP INFORMATIVO */
+.popup-info {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  background: #fff8d0;
+  padding: 20px 30px;
+  border: 2px solid #ffc107;
+  transform: translateX(-50%);
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: aparecer 0.5s ease;
+  border-radius: 10px;
+}
+
+.popup-info button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background: #ffc107;
+  color: #333;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.poup-info p {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+@keyframes aparecer {
+  from {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
 }
 
 

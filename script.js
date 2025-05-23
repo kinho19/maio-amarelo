@@ -131,3 +131,25 @@ function dicaAnterior() {
 
 // Troca automática a cada 7 segundos
 setInterval(proximaDica, 7000);
+
+
+
+
+// pop-up com escrita automática
+const texto = "A cada 15 minutos, uma pessoa morre no trânsito no Brasil. 🚨";
+const elemento = document.getElementById("mensagemDigitada").querySelector("strong");
+
+let i = 0;
+function digitar() {
+  if (i < texto.length) {
+    elemento.innerHTML += texto.charAt(i); // CORRIGIDO: era "+-" (erro de digitação)
+    i++;
+    setTimeout(digitar, 50); // chama a função novamente com pequeno atraso
+  }
+}
+
+window.addEventListener("load", () => {
+  // Exibe o popup antes de iniciar a digitação
+  document.getElementById("popupInfo").style.display = "block";
+  digitar();
+});
